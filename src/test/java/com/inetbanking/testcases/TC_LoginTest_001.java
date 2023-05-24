@@ -1,8 +1,6 @@
 package com.inetbanking.testcases;
 
-import org.apache.log4j.Logger;
 import org.testng.annotations.Test;
-
 
 import com.inetbanking.pageobjects.LoginPage;
 
