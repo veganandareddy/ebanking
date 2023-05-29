@@ -1,5 +1,6 @@
 package com.inetbanking.testcases;
 
+import java.io.IOException;
 import java.time.Duration;
 
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -12,9 +13,9 @@ import junit.framework.Assert;
 
 public class TC_LoginTest_001 extends Baseclass {
 	@Test
-	public void logintest() {
+	public void logintest() throws IOException {
 		
-		driver.get(baseurl);
+		
 		logger.info("url is opened");
 		LoginPage lp =new LoginPage(driver);
 		lp.setusername(username);
@@ -34,6 +35,7 @@ public class TC_LoginTest_001 extends Baseclass {
 			
 		}
 		else {
+			captureScreen(driver,"logintest");
 			Assert.assertFalse(false);
 			logger.info("test filed");
 		}

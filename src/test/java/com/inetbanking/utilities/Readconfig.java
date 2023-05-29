@@ -47,5 +47,11 @@ public class Readconfig {
 		return chromepath;
 		
 	}
+	public String getFirefoxpath()
+	{
+		String firefoxpath=pro.getProperty("firefoxpath");
+		return firefoxpath;
+		
+	}
 
 }
