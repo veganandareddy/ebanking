@@ -22,7 +22,7 @@ public class Baseclass {
 	System.setProperty("webdriver.chrome.driver",readconfig.getchromepath());
 	driver =new ChromeDriver();
 	logger  =Logger.getLogger("ebanking");
-	PropertyConfigurator.configure("log4j.properties");
+	PropertyConfigurator.configure("C:\\All Selenium projects\\inetBakingv1\\src\\main\\log4j.properties");
 	}
 	@AfterClass
 	public void teardown()

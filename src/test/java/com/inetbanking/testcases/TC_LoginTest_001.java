@@ -1,5 +1,9 @@
 package com.inetbanking.testcases;
 
+import java.time.Duration;
+
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import com.inetbanking.pageobjects.LoginPage;
@@ -17,7 +21,11 @@ public class TC_LoginTest_001 extends Baseclass {
 		logger.info("entered username");
 		lp.setpassword(password);
 		logger.info("enetred password");
-		lp.clickandsubit();
+		
+		
+		
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.elementToBeClickable(lp.btnlogin)).click();
 		logger.info("clicked and logined");
 		System.out.println(driver.getTitle());
 		if(driver.getTitle().equals("Guru99 Bank Manager HomePage")) {

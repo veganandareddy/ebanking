@@ -23,6 +23,7 @@ public class LoginPage {
 	WebElement txtpassword;
 	@FindBy(name="btnLogin")
 	@CacheLookup
+	public
 	WebElement btnlogin;
 	
 	public void setusername(String uname)
